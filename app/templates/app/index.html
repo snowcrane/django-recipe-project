@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}HomePage{% endblock  %}
+{% block content %}
+
+<div class='container'>
+  <div class='row'>
+  {% for item in meals %}
+    <div class="card h-100" style="width:18rem;margin:10px;">
+        <img src="{{item.strMealThumb}}" class="card-img-top" alt="image">
+        <div class="card-body">
+          <p class="card-text h6">{{item.strMeal}}</p>
+          <p class="card-text" style="font-size:10px">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
